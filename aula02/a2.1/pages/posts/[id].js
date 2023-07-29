@@ -13,8 +13,8 @@ export async function getStaticPaths() {
   const paths = dados.posts.map((postAtual) => {
     return { params: { id: `${postAtual.id}` } };
   });
-  console.log("dados:", dados);
-  console.log("paths:", paths);
+  // console.log("dados:", dados);
+  // console.log("paths:", paths);
 
   return {
     paths: paths,
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  console.log("Contexto", context.params.id);
+  // console.log("Contexto", context.params.id);
   const id = context.params.id;
 
   const post = dados.posts.find((currentPost) => {
